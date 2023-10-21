@@ -1,0 +1,36 @@
+/* Common styles for all screen sizes */
+.home__image {
+    width: 100%;
+    z-index: -1;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    margin-bottom: -150px;
+}
+
+.home__row {
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1500px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .home__image {
+        margin-bottom: -50px; /* Adjust the margin for smaller screens */
+    }
+
+    .home__row {
+        flex-direction: column; /* Stack rows vertically for smaller screens */
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

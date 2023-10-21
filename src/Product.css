@@ -1,0 +1,80 @@
+/* .product */
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Change to space-between to push content to the top and bottom */
+  align-items: center;
+  background-color: #fff; /* Use a subtle background color */
+  z-index: 1;
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  max-height: 400px;
+  min-width: 200px; /* Increase the min-width for better spacing */
+  border: 1px solid #ddd; /* Add a subtle border */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.2s; /* Add a transition for hover effect */
+}
+
+.product:hover {
+  transform: scale(1.02); /* Enlarge the card slightly on hover */
+}
+
+/* .product > img */
+.product > img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* .product__info */
+.product__info {
+  margin-bottom: 15px;
+  text-align: center; /* Center-align the content */
+}
+
+/* .product__price */
+.product__price {
+  margin-top: 5px;
+  font-weight: bold; /* Make the price text bold */
+  color: #e51a1a; /* Use a distinctive color for price */
+  font-size: 1.2rem; /* Increase the font size */
+}
+
+/* .product > button */
+.product > button {
+  background-color: #f0c14b;
+  border: none; /* Remove the border */
+  margin-top: 10px;
+  color: #111;
+  border-radius: 5px;
+  cursor: pointer; /* Add a pointer cursor on hover */
+  padding: 10px 20px; /* Increase padding for better button size */
+  font-weight: bold; /* Make the button text bold */
+  transition: background-color 0.2s, transform 0.2s; /* Add transitions for hover effect */
+}
+
+.product > button:hover {
+  background-color: #e1a628; /* Darken the button color on hover */
+  transform: scale(1.05); /* Slightly scale the button on hover */
+}
+
+/* .product__rating */
+.product__rating {
+  display: flex;
+  justify-content: center; /* Center-align the rating stars */
+  align-items: center;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .product {
+    max-width: 300px; /* Adjust the max-width for smaller screens */
+  }
+
+  .product > img {
+    max-height: 150px; /* Reduce the image height for smaller screens */
+  }
+}
