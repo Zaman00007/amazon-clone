@@ -24,19 +24,19 @@ function Payment() {
 
   const [clientSecret, setClientSecret] = useState("");
 
-//   useEffect(() => {
-//     const getClientSecret = async () => {
-//       const response = await axios({
-//         method: "post",
-//         // Stripe expects the total in a currencies subunits
-//         url: `/payments/create?total=${getBasketTotal(basket) * 100}`
-//       });
-//       setClientSecret(response.data.clientSecret);
-//     };
+  useEffect(() => {
+    const getClientSecret = async () => {
+      const response = await axios({
+        method: "post",
+        // Stripe expects the total in a currencies subunits
+        url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+      });
+      setClientSecret(response.data.clientSecret);
+    };
 
-//     getClientSecret(); // Call the function to fetch the client secret key
+    getClientSecret(); // Call the function to fetch the client secret key
 
-//   }, [basket]);
+  }, [basket]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
